@@ -1,0 +1,41 @@
+0:02:24 TextSelectionChanged
+0:02:25 Memory Pressure: Moderate
+0:02:25 TextSelectionChanged
+0:02:27 TextSelectionChanged
+0:02:27 TextSelectionChanged
+0:02:28 TextSelectionChanged
+0:02:28 TextSelectionChanged
+0:02:29 TextSelectionChanged
+0:02:29 TextSelectionChanged
+0:02:29 TextSelectionChanged
+0:02:30 TextSelectionChanged
+0:02:30 TextSelectionChanged
+0:02:31 TextSelectionChanged
+0:02:31 TextSelectionChanged
+0:02:32 TextSelectionChanged
+0:02:32 TextSelectionChanged
+0:02:35 Memory Pressure: Moderate
+0:02:35 TextSelectionChanged
+0:02:37 TextSelectionChanged
+0:02:38 TextSelectionChanged
+0:02:38 TextSelectionChanged
+0:02:39 TextSelectionChanged
+0:02:40 Tab1 StartNav10 #typed
+0:02:40 Tab1 RemoveInfobar73
+0:02:40 Tab1 AddInfobar73
+0:02:40 Tab1 FinishNav10
+0:02:42 Tab1 PageLoad
+0:02:43 Tab1 StartNav11 #renderer-script #link
+0:02:43 Tab1 FinishNav11
+0:02:45 Memory Pressure: Moderate
+0:02:49 Tab1 StartNav12 #renderer-script #link
+0:02:49 Tab1 FinishNav12
+0:02:55 Memory Pressure: Moderate
+0:02:58 TextSelectionChanged
+0:03:01 TextSelectionChanged
+0:03:04 TextSelectionChanged
+0:03:04 Browser1 Close Tab1 at 0
+0:03:04 Tab1 RemoveInfobar73 #not-animated
+0:03:04 Widget Closed: BrowserWidget
+0:03:04 Widget Closed: BrowserWidget
+0:03:05 Shutdown

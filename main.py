@@ -1,0 +1,54 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
+import time
+import random
+
+# Configurar navegador
+service = Service(ChromeDriverManager().install())
+driver = webdriver.Chrome(service=service)
+
+driver.get("https://web.whatsapp.com/")
+print("Cargando WhatsApp...")
+time.sleep(20) 
+
+numeros = [
+ #Números de wahatsapp 
+]
+
+mensaje = [
+    "Hola 👋",
+    "Te escribo desde cuenta normal",
+    "Este es un mensaje con informacion importante",
+    "Saludos!"
+]
+
+def escribir_como_humano(elemento, texto):
+    for letra in texto:
+        elemento.send_keys(letra)
+        time.sleep(random.uniform(0.05, 0.15))
+
+for numero in numeros:
+    driver.get(f"https://web.whatsapp.com/send?phone={numero}&text&app_absent=0")
+
+    try:
+        # Esperar a que la caja de mensaje esté disponible
+        caja = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, '//div[@contenteditable="true"][@data-tab="10"]'))
+        )
+
+        escribir_como_humano(caja, mensaje)
+
+        time.sleep(random.uniform(1, 2))
+        caja.send_keys(Keys.ENTER)
+
+        time.sleep(random.uniform(4, 6))
+
+    except Exception as e:
+        print(f"Error con el número {numero}: {e}")
+
+print("Mensajes enviados correctamente ✅")
